@@ -1,0 +1,34 @@
+body {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+}
+
+#color-palette {
+  display: inline-block;
+  width: auto;
+}
+.color {
+  display: inline-block;
+  border: 1px black solid;
+  padding: 40px;
+  margin: 20px;
+}
+
+.black {
+  background-color: black;
+}
+
+.lilac {
+  background-color: rgb(178, 177, 233);
+}
+
+.blue {
+  background-color: rgb(85, 169, 242);
+}
+
+.pink {
+  background-color: rgb(249, 127, 196);
+}
