@@ -32,3 +32,15 @@ body {
 .pink {
   background-color: rgb(249, 127, 196);
 }
+
+#pixel-board {
+  display: grid;
+  grid-template-columns: repeat(5, 85px);
+  justify-content: center;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px black solid;
+  padding: 40px;
+}
