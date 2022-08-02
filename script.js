@@ -7,3 +7,7 @@ function addPixels(){
     }
 }
 addPixels()
+const colorBlack = document.querySelector('.black');
+window.onload = function load() {
+       colorBlack.classList.add('selected');
+}
