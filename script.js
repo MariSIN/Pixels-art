@@ -1,13 +1,31 @@
 const pixels = document.querySelector('#pixel-board');
-function addPixels(){
-    for(let i = 0; i < 25; i+=1){
-        const pixel = document.createElement('div');
-        pixel.className = 'pixel';
-        pixels.appendChild(pixel)
-    }
+function addPixels() {
+  for (let i = 0; i < 25; i += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixels.appendChild(pixel);
+  }
 }
-addPixels()
+addPixels();
 const colorBlack = document.querySelector('.black');
-window.onload = function load() {
-       colorBlack.classList.add('selected');
+window.onload = () => {
+  colorBlack.classList.add('selected');
+};
+
+const selectColors = document.querySelectorAll('.color');
+function removeSelectedColor() {
+  for (i = 0; i < selectColors.length; i += 1) {
+    console.log(selectColors[i]);
+    selectColors[i].classList.remove('selected');
+  }
 }
+function selectColor() {
+  for (i = 0; i < selectColors.length; i += 1) {
+    console.log(selectColors[i]);
+    selectColors[i].addEventListener('click', (event) => {
+      removeSelectedColor();
+      event.target.classList.add('selected');
+    });
+  }
+}
+selectColor();
