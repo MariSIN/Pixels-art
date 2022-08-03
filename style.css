@@ -9,6 +9,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  background-image: linear-gradient(
+    45deg,
+    hsl(305, 47%, 77%) 0%,
+    #e1caea 46%,
+    #75dfe7 100%
+  );
+  height: 100vh;
 }
 
 header {
@@ -21,12 +28,39 @@ header {
 #title {
   font-size: 35px;
   margin-bottom: 15px;
+  font-family: 'Coming Soon', cursive;
+  color: rgb(148, 23, 189);
+}
+
+#subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin-top: 30px;
+  border: 1px rgb(173, 143, 196) solid;
+  color: rgb(127, 24, 171);
+}
+
+#clear-board {
+  background-color: rgb(232, 226, 238);
+  padding: 4px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(73, 11, 82);
+}
+
+#clear-board:hover {
+  background-color: rgb(247, 209, 247);
 }
 
 #color-palette {
   display: flex;
-
 }
+
+.selected {
+  box-shadow: 0px 5px 8px rgb(195, 116, 235);
+  transition-timing-function: ease-in-out;
+}
+
 .color {
   border: 1px black solid;
   height: 40px;
@@ -48,6 +82,7 @@ header {
 .pink {
   background-color: rgb(249, 127, 196);
 }
+
 
 #pixel-board {
   display: grid;
