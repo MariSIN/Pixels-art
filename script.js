@@ -15,17 +15,28 @@ window.onload = () => {
 const selectColors = document.querySelectorAll('.color');
 function removeSelectedColor() {
   for (i = 0; i < selectColors.length; i += 1) {
-    console.log(selectColors[i]);
     selectColors[i].classList.remove('selected');
   }
 }
-function selectColor() {
+function selectedColor() {
   for (i = 0; i < selectColors.length; i += 1) {
-    console.log(selectColors[i]);
     selectColors[i].addEventListener('click', (event) => {
       removeSelectedColor();
       event.target.classList.add('selected');
     });
   }
 }
-selectColor();
+selectedColor();
+
+const pixel = document.querySelector('.pixel');
+function selectionColors() {
+  for (i = 0; i < pixel.length; i += 1) {
+    if(selectedColor() === pixel[i]) {
+        add.addEventListener('click', (event) => {
+            event.target.style.backgroundColor = selectedColor();
+        })
+    }
+    }
+  }
+
+selectionColors();
