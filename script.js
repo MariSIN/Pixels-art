@@ -28,11 +28,25 @@ function selectedColor() {
 }
 selectedColor();
 
-
 function selectionColors() {
   pixels.addEventListener('click', (event) => {
     const selected = document.querySelector('.selected');
     event.target.style.backgroundColor = getComputedStyle(selected, null).backgroundColor;
+    if (event.shiftKey) {
+      event.target.style.backgroundColor = 'white';
+    }
   });
 }
 selectionColors();
+
+function clearPixels(){
+  const pixel = document.querySelectorAll('.pixel');
+  const button = document.querySelector('#clear-board');
+  button.addEventListener('click', (event) => {
+    for(let i = 0; i < pixel.length; i+=1){
+    pixel[i].style.backgroundColor = 'white';
+    }
+  })
+  
+}
+clearPixels();
