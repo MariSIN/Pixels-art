@@ -28,15 +28,11 @@ function selectedColor() {
 }
 selectedColor();
 
-const pixel = document.querySelector('.pixel');
-function selectionColors() {
-  for (i = 0; i < pixel.length; i += 1) {
-    if(selectedColor() === pixel[i]) {
-        add.addEventListener('click', (event) => {
-            event.target.style.backgroundColor = selectedColor();
-        })
-    }
-    }
-  }
 
+function selectionColors() {
+  pixels.addEventListener('click', (event) => {
+    const selected = document.querySelector('.selected');
+    event.target.style.backgroundColor = getComputedStyle(selected, null).backgroundColor;
+  });
+}
 selectionColors();
