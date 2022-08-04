@@ -30,13 +30,13 @@ header {
   margin-bottom: 15px;
   font-family: 'Coming Soon', cursive;
   color: rgb(148, 23, 189);
- }
+}
 
- #title:hover {
+#title:hover {
   -webkit-text-stroke: 1px #dab0e0;
   transition-timing-function: ease-in-out;
   max-width: max-content;
- }
+}
 
 #subtitle {
   font-family: 'Montserrat', sans-serif;
@@ -53,7 +53,6 @@ header {
   border: 1px #9243b1 solid;
   font-family: 'Montserrat', sans-serif;
   color: rgb(73, 11, 82);
- 
 }
 
 #clear-board:active {
@@ -96,10 +95,10 @@ header {
   background-color: rgb(249, 127, 196);
 }
 
-
 #pixel-board {
   display: grid;
   grid-template-columns: repeat(5, auto);
+  box-shadow: 0px 3px 5px rgb(195, 116, 235);
 }
 
 .pixel {
@@ -107,5 +106,4 @@ header {
   border: 1px black solid;
   height: 40px;
   width: 40px;
-  box-shadow: 0px 3px 5px rgb(195, 116, 235);
 }
