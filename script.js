@@ -1,20 +1,6 @@
-function morePixels() {
-  const buttonMorePixels = document.querySelector('#generate-board');
-  const inputPixels = document.querySelector('#board-size');
-
-  buttonMorePixels.addEventListener('click', () => {
-    const inputPixels = document.querySelector('#board-size');
-    if (inputPixels.value == '') {
-      window.alert('Board inválido!');
-    } else {
-      pixels.innerHTML = '';
-      addPixels(inputPixels.value);
-    }
-  });
-}
-morePixels();
-
 const pixels = document.querySelector('#pixel-board');
+const inputPixels = document.querySelector('#board-size');
+
 function addPixels(boardSize) {
   pixels.style.gridTemplateColumns = `repeat(${boardSize}, auto)`;
   for (let i = 0; i < boardSize * boardSize; i += 1) {
@@ -24,6 +10,30 @@ function addPixels(boardSize) {
   }
 }
 addPixels(5);
+
+function morePixels() {
+  const buttonMorePixels = document.querySelector('#generate-board');
+
+  buttonMorePixels.addEventListener('click', () => {
+    if (inputPixels.value == '') {
+      window.alert('Board inválido!');
+    } else {
+      pixels.innerHTML = '';
+      addPixels(checkPixels(inputPixels.value));
+    }
+  });
+}
+morePixels();
+
+function checkPixels(size) {
+  if (inputPixels.value < 5) {
+    return 5;
+  } else if (inputPixels.value > 50) {
+    return 50;
+  } else {
+    return size;
+  }
+}
 
 const colorBlack = document.querySelector('.black');
 window.onload = () => {
@@ -66,10 +76,19 @@ const pixel = document.querySelectorAll('.pixel');
 
 function clearPixels() {
   const button = document.querySelector('#clear-board');
-  button.addEventListener('click', (event) => {
+  button.addEventListener('click', () => {
     for (let i = 0; i < pixel.length; i += 1) {
       pixel[i].style.backgroundColor = 'white';
     }
   });
 }
 clearPixels();
+
+function randomColor() {
+  const color = document.querySelectorAll('.color');
+  const rColor = () => Math.floor(Math.random() * 255 + 1);
+  for (let i = 1; i < 4; i += 1) {
+    color[i].style.backgroundColor = `rgb(${rColor()}, ${rColor()}, ${rColor()})`;
+  }
+}
+randomColor();
