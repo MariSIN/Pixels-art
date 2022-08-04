@@ -46,6 +46,14 @@ header {
   color: rgb(127, 24, 171);
 }
 
+#board-size, #generate-board, #clear-board{
+  background-color: rgb(242, 238, 245);
+  padding: 4px;
+  color: #9243b1;
+  box-shadow: -2px 2px 2px rgb(219, 169, 244);
+  border:2px #9775c2 solid;
+}
+
 #clear-board {
   background-color: rgb(232, 226, 238);
   padding: 4px;
@@ -55,7 +63,7 @@ header {
   color: rgb(73, 11, 82);
 }
 
-#clear-board:active {
+#clear-board:active, #generate-board:active {
   background-color: rgb(247, 209, 247);
   -webkit-text-stroke: 0.7px #905ba4;
   transition-timing-function: ease-in-out;
@@ -99,6 +107,7 @@ header {
   display: grid;
   grid-template-columns: repeat(5, auto);
   box-shadow: 0px 3px 5px rgb(195, 116, 235);
+  
 }
 
 .pixel {
