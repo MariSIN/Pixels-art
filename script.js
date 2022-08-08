@@ -72,16 +72,16 @@ function selectionColors() {
 }
 selectionColors();
 
-const pixel = document.querySelectorAll('.pixel');
 
 function clearPixels() {
   const button = document.querySelector('#clear-board');
   button.addEventListener('click', () => {
+    const pixel = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixel.length; i += 1) {
       pixel[i].style.backgroundColor = 'white';
     }
   });
-}
+}//problema aqui
 clearPixels();
 
 function randomColor() {
