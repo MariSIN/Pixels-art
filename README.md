@@ -1,12 +1,8 @@
 # Boas-vindas ao repositório do projeto Arte com Pixels!
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por Slack! #vqv :rocket:
+Para realizar o projeto, foi seguido cada passo descrito a seguir.
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
-
-# Termos e acordos
-
-Ao iniciar este projeto, você concorda com as diretrizes do [Código de Conduta e do Manual da Pessoa Estudante da Trybe](https://app.betrybe.com/manual-estudante/codigo-de-etica-e-conduta).
+Aqui você pode acessar diretamente o site: https://marisin.github.io/Pixels-art/
 
 # Entregáveis
 
