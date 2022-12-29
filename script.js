@@ -11,11 +11,20 @@ function addPixels(boardSize) {
 }
 addPixels(5);
 
+function checkPixels(size) {
+  if (inputPixels.value < 5) {
+    return 5;
+  } if (inputPixels.value > 50) {
+    return 50;
+  }
+  return size;
+}
+
 function morePixels() {
   const buttonMorePixels = document.querySelector('#generate-board');
 
   buttonMorePixels.addEventListener('click', () => {
-    if (inputPixels.value == '') {
+    if (inputPixels.value === '') {
       window.alert('Board inválido!');
     } else {
       pixels.innerHTML = '';
@@ -25,16 +34,6 @@ function morePixels() {
 }
 morePixels();
 
-function checkPixels(size) {
-  if (inputPixels.value < 5) {
-    return 5;
-  } else if (inputPixels.value > 50) {
-    return 50;
-  } else {
-    return size;
-  }
-}
-
 const colorBlack = document.querySelector('.black');
 window.onload = () => {
   colorBlack.classList.add('selected');
@@ -43,13 +42,13 @@ window.onload = () => {
 const selectColors = document.querySelectorAll('.color');
 
 function removeSelectedColor() {
-  for (i = 0; i < selectColors.length; i += 1) {
+  for (let i = 0; i < selectColors.length; i += 1) {
     selectColors[i].classList.remove('selected');
   }
 }
 
 function selectedColor() {
-  for (i = 0; i < selectColors.length; i += 1) {
+  for (let i = 0; i < selectColors.length; i += 1) {
     selectColors[i].addEventListener('click', (event) => {
       removeSelectedColor();
       event.target.classList.add('selected');
@@ -61,9 +60,10 @@ selectedColor();
 function selectionColors() {
   pixels.addEventListener('click', (event) => {
     const selected = document.querySelector('.selected');
+    /* eslint-disable no-param-reassign */
     event.target.style.backgroundColor = getComputedStyle(
       selected,
-      null
+      null,
     ).backgroundColor;
     if (event.shiftKey) {
       event.target.style.backgroundColor = 'white';
@@ -71,7 +71,6 @@ function selectionColors() {
   });
 }
 selectionColors();
-
 
 function clearPixels() {
   const button = document.querySelector('#clear-board');
@@ -81,7 +80,7 @@ function clearPixels() {
       pixel[i].style.backgroundColor = 'white';
     }
   });
-}//problema aqui
+}
 clearPixels();
 
 function randomColor() {
