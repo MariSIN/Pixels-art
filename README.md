@@ -1,7 +1,5 @@
 # Boas-vindas ao repositório do projeto Arte com Pixels!
 
-Para realizar o projeto, foi seguido cada passo descrito a seguir.
-
 Aqui você pode acessar diretamente o site: https://marisin.github.io/Pixels-art/
 
 # Entregáveis
