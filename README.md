@@ -2,7 +2,7 @@
 
 :paperclip: https://marisin.github.io/Pixels-art/
 
-# Entregáveis
+### Terceiro Projeto no módulo de Fundamentos na Trybe
 
 <details>
   <summary><strong>👨‍💻 O que foi desenvolvido</strong></summary><br />
