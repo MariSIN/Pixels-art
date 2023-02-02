@@ -1,6 +1,6 @@
 # Boas-vindas ao repositório do projeto Arte com Pixels!
 
-Aqui você pode acessar diretamente o site: https://marisin.github.io/Pixels-art/
+:paperclip: https://marisin.github.io/Pixels-art/
 
 # Entregáveis
 
@@ -10,12 +10,8 @@ Aqui você pode acessar diretamente o site: https://marisin.github.io/Pixels-art
 
 Neste projeto, você vai implementar um editor de arte com pixels em que a pessoa usuária poderá escolher uma cor em uma paleta de cores e poderá pintar o que quiser em um quadro branco 🎨 🧑‍🎨
 
-
 </details>
 
-<details>
-
-# Orientações
 
 <details>
   <summary><strong>🏗 Estrutura do projeto</strong></summary>
